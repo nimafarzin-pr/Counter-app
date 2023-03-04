@@ -4,7 +4,7 @@ A Flutter project about state managment with bloc.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application wiht bloc.
+This project is a starting point for a Flutter application with bloc.
 
 development content:
 
