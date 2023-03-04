@@ -29,7 +29,7 @@ class _AnimatedBoxState extends State<AnimatedBox> {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          // Lottie.asset(AssetResources.counterTextBackground),
+          Lottie.asset(AssetResources.counterTextBackground),
           ZoomIn(
               duration: const Duration(milliseconds: 400),
               manualTrigger: true,
