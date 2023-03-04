@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../core/constants/strings.dart';
-import '../../core/exception/route_exception.dart';
-import '../screens/home_screen/home_screen.dart';
+import '../constants/strings.dart';
+import '../exception/route_exception.dart';
+import '../../counter/view/counter_page.dart';
 
 class AppRouter {
   AppRouter._();
@@ -12,7 +12,8 @@ class AppRouter {
     switch (settings.name) {
       case home:
         return MaterialPageRoute(
-          builder: (_) => const HomeScreen(title: Strings.homeScreenTitle),
+          builder: (_) => const CounterPage(
+              title: Strings.homeScreenTitle, key: Key('counterPage')),
         );
 
       default:

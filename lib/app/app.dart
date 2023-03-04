@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../core/constants/strings.dart';
-import '../../core/themes/app_theme.dart';
-import '../../logic/cubit/theme/theme_cubit.dart';
-import '../router/app_router.dart';
+import '../core/constants/strings.dart';
+import '../core/themes/app_theme.dart';
+import '../core/router/app_router.dart';
+import '../theme/cubit/theme_cubit.dart';
 
-class CounterApp extends StatefulWidget {
-  const CounterApp({
-    Key? key,
-  }) : super(key: key);
+class CounterApp extends StatefulWidget with WidgetsBindingObserver {
+  const CounterApp({super.key});
 
   @override
   State<CounterApp> createState() => _CounterAppState();

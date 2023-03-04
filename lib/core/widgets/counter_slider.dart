@@ -1,8 +1,11 @@
 import 'package:counter_app/core/extentions/size_extention.dart';
-import 'package:counter_app/logic/cubit/counter/counter_cubit.dart';
+import 'package:counter_app/counter/cubit/counter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+const increaseKey = 'increase';
+const decreaseKey = 'decrease';
 
 class CounterSlider extends StatefulWidget {
   const CounterSlider({super.key});
@@ -83,7 +86,7 @@ class _Stepper2State extends State<CounterSlider>
             child: SliderContainer(isHorizontal: true),
           ),
           GestureDetector(
-            key: const Key('conter'),
+            key: const Key('slider'),
             onHorizontalDragStart: _onPanHorizontalStart,
             onHorizontalDragUpdate: _onPanHorizontalUpdate,
             onHorizontalDragEnd: _onPanHorizontalEnd,
@@ -127,6 +130,7 @@ class _Stepper2State extends State<CounterSlider>
 
   void _onPanHorizontalUpdate(DragUpdateDetails details) {
     _controller.value = offsetFromGlobalPosHorizontal(details.globalPosition);
+    print('**H**${_controller.value}');
   }
 
   void _onPanHorizontalEnd(DragEndDetails details) {
@@ -136,6 +140,7 @@ class _Stepper2State extends State<CounterSlider>
     } else if (_controller.value >= 0.20) {
       context.read<CounterCubit>().increment();
     }
+
     final SpringDescription kDefaultSpring = SpringDescription.withDampingRatio(
       mass: 0.8,
       stiffness: 200.0,
@@ -162,6 +167,7 @@ class _Stepper2State extends State<CounterSlider>
 
   void _onPanVerticalUpdate(DragUpdateDetails details) {
     _controller.value = offsetFromGlobalPosVertical(details.globalPosition);
+    print('###V#${_controller.value}');
   }
 
   void _onPanVerticalEnd(DragEndDetails details) {

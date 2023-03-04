@@ -12,9 +12,10 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
+      key: const Key("customText"),
       text,
       textAlign: TextAlign.center,
-      style: TextStyle(fontSize: context.height * 0.050),
+      style: Theme.of(context).textTheme.bodyMedium,
     );
   }
 }

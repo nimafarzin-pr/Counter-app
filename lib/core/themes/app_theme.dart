@@ -16,11 +16,18 @@ class AppTheme {
   static const Color darkParticlesColor = Color(0x441C2A3D);
 
   static final lightTheme = ThemeData.from(
-    // brightness: Brightness.light,
-    // primaryColor: lightPrimaryColor,
-    // visualDensity: VisualDensity.adaptivePlatformDensity,
-    // accentColor: ,
-    // backgroundColor: lightBackgroundColor,
+    textTheme: const TextTheme(
+      displayLarge: TextStyle(
+          fontSize: 72.0,
+          fontWeight: FontWeight.bold,
+          color: lightPrimaryColor),
+      titleLarge: TextStyle(
+          fontSize: 36.0,
+          fontStyle: FontStyle.italic,
+          color: lightPrimaryColor),
+      bodyMedium: TextStyle(
+          fontSize: 14.0, fontFamily: 'Hind', color: lightPrimaryColor),
+    ),
     colorScheme: ColorScheme.fromSwatch().copyWith(
       primary: lightPrimaryColor,
       secondary: lightAccentColor,
@@ -30,7 +37,20 @@ class AppTheme {
   ).copyWith(
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
+
   static final darkTheme = ThemeData.from(
+    textTheme: const TextTheme(
+      displayLarge: TextStyle(
+          fontSize: 72.0,
+          fontWeight: FontWeight.bold,
+          color: lightPrimaryColor),
+      titleLarge: TextStyle(
+          fontSize: 36.0,
+          fontStyle: FontStyle.italic,
+          color: lightPrimaryColor),
+      bodyMedium: TextStyle(
+          fontSize: 14.0, fontFamily: 'Hind', color: lightPrimaryColor),
+    ),
     colorScheme: ColorScheme.fromSwatch().copyWith(
       primary: darkPrimaryColor,
       secondary: darkAccentColor,

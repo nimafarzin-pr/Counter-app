@@ -1,9 +1,9 @@
 import 'package:counter_app/core/extentions/size_extention.dart';
-import 'package:counter_app/presentation/widgets/zomin_anmation_widget.dart';
+import 'package:counter_app/core/widgets/zoomin_anmation_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../core/sources/assets_resources.dart';
+import '../sources/assets_resources.dart';
 
 class AnimatedBox extends StatefulWidget {
   const AnimatedBox({
@@ -29,7 +29,7 @@ class _AnimatedBoxState extends State<AnimatedBox> {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Lottie.asset(AssetResources.counterTextBackground),
+          // Lottie.asset(AssetResources.counterTextBackground),
           ZoomIn(
               duration: const Duration(milliseconds: 400),
               manualTrigger: true,
