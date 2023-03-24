@@ -12,6 +12,5 @@ development content:
 - custom widgets
 - animations
 - bloc state management 
-- widget test
-- unit test
+- integration, unit and widget test
 
