@@ -46,6 +46,8 @@ dependencies:
   # path_provider: ^2.0.11
 
 dev_dependencies:
+  integration_test:
+    sdk: flutter
   flutter_test:
     sdk: flutter
 
