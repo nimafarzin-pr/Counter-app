@@ -1,7 +1,6 @@
 # counter_app
 
-![Project!](counter1.png)
-![Project!](counter2.png)
+![Project!](counter_pic.png)
 
 A Flutter project about test and state managment with bloc.
 
