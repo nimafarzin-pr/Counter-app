@@ -1,6 +1,9 @@
 # counter_app
 
-A Flutter project about state managment with bloc.
+![Project!](counter1.png)
+![Project!](counter2.png)
+
+A Flutter project about test and state managment with bloc.
 
 ## Getting Started
 
